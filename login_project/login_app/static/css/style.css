@@ -1,0 +1,37 @@
+.card {
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    margin-left:95px;
+}
+#remember_me{
+    text-shadow: #454347;
+    color: black;
+}
+
+h4{
+    font-family:monospace;
+    color: rgb(212, 192, 213);
+    font-size: xx-large;
+    font-weight: bolder;
+    text-shadow: 2px 2px 5px #06d3e6;
+
+}
+label{
+    font-family: 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: medium;
+    font-weight: lighter;
+    text-shadow: 1px 1px 5px  #454347;
+    color: #06d3e6;
+    text-shadow: 2px 0px 5px #06d3e6;
+
+}
+
+#remember{
+    color: rgb(19, 148, 212) !important;}
+p{
+    font-size: small;
+}
+button{
+    color:#fff !important;
+}
+

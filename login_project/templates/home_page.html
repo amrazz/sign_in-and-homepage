@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    {% load static %}
+
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: url("{% static 'images/img3.jpg' %}");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 95%;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    background-size: cover;
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9em;
+}
+
+.card{
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    height: 300px;
+    width: 300px;
+    margin-left:150px;
+}
+
+
+
+.gradient{
+    position: absolute;
+    background-image: linear-gradient(0deg,#fd7e14, transparent);
+    height: 73%;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s;
+    padding-right: 221px;
+    margin-left: -20px;
+    border-radius: 7px;
+
+}
+.card:hover .gradient{
+    opacity: 3;
+}
+h4 ,h3{
+    color:#fff;
+    font-family: "Times New Roman", Times, serif;
+
+}
+.btn{
+    margin-left:145px;
+    margin-top:10px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+</style>
+
+</head>
+<body>
+    <div class="container-lg d-flex flex-column w-100 vh-100 text-center justify-content-center  ">
+
+        <div class="row justify-content-center mt-5  ">
+        <div class="col-xs-6 border-dark rounded   ">
+            <div class="card  ">
+
+                <div class="card-header">
+                    <h4 class= 'text-center bg-transparent'>HomePage</h4>
+                </div>
+               <div class="card-body">
+                <div class="gradient"></div>
+                <h3 >Welcome to HomePage</h3>
+                <br>
+                <h3>Nice to Meet You</h3>
+               </div>
+            </div>
+            <form action='{% url 'log_out' %}' method="post">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-warning">Logout</button>
+
+
+
+            </form>
+           
+
+
+        </div>
+    </div>
+</div>
+</body>
+</html>
